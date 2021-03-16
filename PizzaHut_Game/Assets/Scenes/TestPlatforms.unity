@@ -213,53 +213,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &567125453
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 567125455}
-  - component: {fileID: 567125454}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &567125454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567125453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc6be1a7a1fc38948a59d1d9e104444d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AR_object: {fileID: 6829051119388175832, guid: d3481067d3a47a74daee230372a001b2,
-    type: 3}
-  AR_Camera: {fileID: 832217099}
-  raycastManager: {fileID: 1356044587}
---- !u!4 &567125455
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567125453}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832217098
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +408,7 @@ GameObject:
   - component: {fileID: 1356044590}
   - component: {fileID: 1356044589}
   - component: {fileID: 1356044587}
+  - component: {fileID: 1356044591}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -517,3 +471,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 832217099}
+--- !u!114 &1356044591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356044586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6be1a7a1fc38948a59d1d9e104444d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AR_object: {fileID: 6829051119388175832, guid: d3481067d3a47a74daee230372a001b2,
+    type: 3}
