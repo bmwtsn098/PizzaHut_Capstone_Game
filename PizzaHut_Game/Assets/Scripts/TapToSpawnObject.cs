@@ -8,31 +8,31 @@ using UnityEngine.XR.ARSubsystems;
 public class TapToSpawnObject : MonoBehaviour
 {
 
-    public GameObject AR_object;
+    public GameObject gameObjectToTnstantiate;
+
     private GameObject spawnedObject;
-    private ARRaycastManager raycastManager;
-    private Vector2 touchPos;
+    private ARRaycastManager _arRaycastManager;
+    private Vector2 touchPosition;
 
-    static public List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    // Start is called before the first frame update
     private void Awake()
     {
 
-        raycastManager = GetComponent<ARRaycastManager>();
+        _arRaycastManager = GetComponent<ARRaycastManager>();
     }
 
-    bool getTouch(out Vector2 touchPos)
+    bool getTouch(out Vector2 touchPosition)
     {
 
         if(Input.touchCount > 0)
         {
 
-            touchPos = Input.GetTouch(0).position;
+            touchPosition = Input.GetTouch(0).position;
             return true;
         }
 
-        touchPos = default;
+        touchPosition = default;
         return false;
     }
 
@@ -40,22 +40,22 @@ public class TapToSpawnObject : MonoBehaviour
     void Update()
     {
 
-        if (!getTouch(out Vector2 touchPos))
+        if (!getTouch(out Vector2 touchPosition))
             return;
 
-        if(raycastManager.Raycast(touchPos, hits, TrackableType.PlaneWithinPolygon))
+        if(_arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
 
             var hitPose = hits[0].pose;
 
-            if(spawnedObject = null)
+            if(spawnedObject == null)
             {
 
-                spawnedObject = Instantiate(AR_object, hitPose.position, hitPose.rotation);
+                spawnedObject = Instantiate(gameObjectToTnstantiate, hitPose.position, hitPose.rotation);
             } else
             {
 
-                AR_object.transform.position = hitPose.position;
+                gameObjectToTnstantiate.transform.position = hitPose.position;
             }
         }
     }
