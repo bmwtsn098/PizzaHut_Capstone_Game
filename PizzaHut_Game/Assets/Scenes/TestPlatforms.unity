@@ -483,5 +483,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6be1a7a1fc38948a59d1d9e104444d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToTnstantiate: {fileID: 6332445322847482160, guid: 48d7689d21bd40644aa32bd974284af8,
+  PlaceablePrefab: {fileID: 3550960060503180880, guid: 213e7e9b228c5544ead00d8efa30ee4a,
     type: 3}
