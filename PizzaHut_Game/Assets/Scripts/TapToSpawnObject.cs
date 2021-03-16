@@ -10,19 +10,19 @@ public class TapToSpawnObject : MonoBehaviour
 
     public GameObject gameObjectToTnstantiate;
 
-    private GameObject spawnedObject;
+    private GameObject spawnedObject = null;
     private ARRaycastManager _arRaycastManager;
     private Vector2 touchPosition;
 
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    private void Awake()
+    void Awake()
     {
 
         _arRaycastManager = GetComponent<ARRaycastManager>();
     }
 
-    bool getTouch(out Vector2 touchPosition)
+    bool TryGetTouchPosition(out Vector2 touchPosition)
     {
 
         if(Input.touchCount > 0)
@@ -40,7 +40,7 @@ public class TapToSpawnObject : MonoBehaviour
     void Update()
     {
 
-        if (!getTouch(out Vector2 touchPosition))
+        if (!TryGetTouchPosition(out Vector2 touchPosition))
             return;
 
         if(_arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
