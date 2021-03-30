@@ -125,7 +125,7 @@ public class TapToSpawnObject : MonoBehaviour
         }
     }
 
-    public void buttonPress()
+    public void placeLevel()
     {
 
         levelPlaced = true;
