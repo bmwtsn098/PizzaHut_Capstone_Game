@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerJoystick : MonoBehaviour
@@ -10,6 +11,8 @@ public class PlayerJoystick : MonoBehaviour
 	public int speed;
 	private Renderer color;
 	public JoystickController joystick;
+
+	private int points = 0;
 
 	// Use this for initialization
 	void Start()
@@ -40,4 +43,25 @@ public class PlayerJoystick : MonoBehaviour
 		player.AddForce(move * speed);
 
 	}
+
+	void OnCollisionEnter(Collision collision)
+    {
+
+		if(collision.gameObject.CompareTag("Point"))
+        {
+
+			collision.gameObject.SetActive(false);
+			points++;
+        }
+
+		if(collision.gameObject.CompareTag("Exit"))
+        {
+
+			if(points >= 2)
+            {
+
+				SceneManager.LoadScene(0);
+            }
+        }
+    }
 }

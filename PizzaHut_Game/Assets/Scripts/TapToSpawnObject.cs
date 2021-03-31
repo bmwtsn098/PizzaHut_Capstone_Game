@@ -74,6 +74,8 @@ public class TapToSpawnObject : MonoBehaviour
     public GameObject button;
     public GameObject text;
 
+    public GameObject player;
+
     private void Awake()
     {
 
@@ -81,6 +83,7 @@ public class TapToSpawnObject : MonoBehaviour
         joystick.SetActive(false);
         button.SetActive(true);
         text.SetActive(true);
+        player.SetActive(false);
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
@@ -132,5 +135,8 @@ public class TapToSpawnObject : MonoBehaviour
         joystick.SetActive(true);
         button.SetActive(false);
         text.SetActive(false);
+        GameObject spawnPoint = GameObject.FindGameObjectWithTag("Spawn1");
+        player.transform.position = spawnPoint.transform.position;
+        player.SetActive(true);
     }
 }
