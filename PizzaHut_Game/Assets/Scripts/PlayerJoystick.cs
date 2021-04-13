@@ -57,7 +57,7 @@ public class PlayerJoystick : MonoBehaviour
 		if(collision.gameObject.CompareTag("Exit"))
         {
 
-			if(points >= 2)
+			if(points >= 5)
             {
 
 				SceneManager.LoadScene(1);
