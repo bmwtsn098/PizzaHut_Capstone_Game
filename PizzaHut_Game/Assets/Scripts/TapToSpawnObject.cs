@@ -76,6 +76,8 @@ public class TapToSpawnObject : MonoBehaviour
 
     public GameObject player;
 
+    public ARPlaneManager planeManager;
+
     private void Awake()
     {
 
@@ -138,5 +140,12 @@ public class TapToSpawnObject : MonoBehaviour
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("Spawn1");
         player.transform.position = spawnPoint.transform.position;
         player.SetActive(true);
+
+        planeManager.enabled = !planeManager.enabled;
+        foreach(var plane in planeManager.trackables)
+        {
+
+            plane.gameObject.SetActive(false);
+        }
     }
 }
