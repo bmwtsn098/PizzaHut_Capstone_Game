@@ -8,6 +8,9 @@ TagManager:
   - Point
   - Exit
   - ItemSpawnLocation
+  - Building
+  - DeliveryLocation
+  - PizzaHut
   layers:
   - Default
   - TransparentFX

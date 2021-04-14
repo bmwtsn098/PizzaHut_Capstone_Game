@@ -385,7 +385,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3148187812244953620, guid: 315a82c8f85b7f64ab64686ffc67564d,
           type: 3}
-        m_MethodName: spawnItems
+        m_MethodName: placedLevelStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

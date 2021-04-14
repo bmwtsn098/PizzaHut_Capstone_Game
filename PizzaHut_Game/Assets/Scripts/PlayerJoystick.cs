@@ -12,8 +12,6 @@ public class PlayerJoystick : MonoBehaviour
 	private Renderer color;
 	public JoystickController joystick;
 
-	private int points = 0;
-
 	// Use this for initialization
 	void Start()
 	{
@@ -51,17 +49,18 @@ public class PlayerJoystick : MonoBehaviour
         {
 
 			collision.gameObject.SetActive(false);
-			points++;
         }
 
 		if(collision.gameObject.CompareTag("Exit"))
         {
 
-			if(points >= 5)
-            {
+			SceneManager.LoadScene(1);
+        }
 
-				SceneManager.LoadScene(1);
-            }
+		if(collision.gameObject.CompareTag("DeliveryLocation"))
+        {
+
+			collision.gameObject.tag = "Building";
         }
     }
 }
