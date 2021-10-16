@@ -16,6 +16,8 @@ public class CityLevelController : MonoBehaviour
     void Start()
     {
 
+        FindObjectOfType<AudioManager>().Play("Summer BGM");
+
         deliveryLocationPicked = false;
         selectedBuilding = null;
 
