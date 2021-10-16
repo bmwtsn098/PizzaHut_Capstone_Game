@@ -31,6 +31,13 @@ public class AudioManager : MonoBehaviour
 
 			s.source.outputAudioMixerGroup = mixerGroup;
 		}
+
+	}
+
+	void Start()
+    {
+
+		FindObjectOfType<AudioManager>().Play("Menu Music");
 	}
 
 	public void Play(string sound)
