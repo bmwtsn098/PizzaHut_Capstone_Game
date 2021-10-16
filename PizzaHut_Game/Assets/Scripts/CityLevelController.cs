@@ -15,7 +15,7 @@ public class CityLevelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        FindObjectOfType<AudioManager>().StopAll();
         FindObjectOfType<AudioManager>().Play("Summer BGM");
 
         deliveryLocationPicked = false;

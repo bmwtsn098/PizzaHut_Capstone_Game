@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
+    void Start()
+    {
+
+        FindObjectOfType<AudioManager>().StopAll();
+        FindObjectOfType<AudioManager>().Play("Menu Music");
+    }
+
     public void StartGame()
     {
 
