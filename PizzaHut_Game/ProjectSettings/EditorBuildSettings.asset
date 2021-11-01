@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/PizzaMainMenu.unity
     guid: 1cfc7b2d1f00b4341a1eb59fbef5e9ff
   - enabled: 1
-    path: Assets/Scenes/Level.unity
+    path: Assets/Scenes/Level_1.unity
     guid: 5b9988bee253c2d44a39d811fc1d4948
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
