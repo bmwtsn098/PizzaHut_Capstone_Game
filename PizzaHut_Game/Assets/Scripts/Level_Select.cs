@@ -23,4 +23,10 @@ public class Level_Select : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void mainMenu()
+    {
+
+        SceneManager.LoadScene(0);
+    }
+
 }
