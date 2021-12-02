@@ -54,7 +54,7 @@ public class PlayerJoystick : MonoBehaviour
 		if(collision.gameObject.CompareTag("Exit"))
         {
 
-			SceneManager.LoadScene(4);
+			SceneManager.LoadScene(5);
         }
 
 		if(collision.gameObject.CompareTag("DeliveryLocation"))
