@@ -11,7 +11,7 @@ public class PlayerJoystick : MonoBehaviour
 	public int speed;
 	private Renderer color;
 	public JoystickController joystick;
-	public GameObject canvas;
+	public Text timer;
 	private float time = 0;
 
 	// Use this for initialization
@@ -36,7 +36,7 @@ public class PlayerJoystick : MonoBehaviour
 		Level_Time.TimeTakenMin = minutes;
 		Level_Time.TimeTakenSec = seconds;
 
-		Text timer = (Text)canvas.GetComponent("Timer");
+		
 		timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
 	}

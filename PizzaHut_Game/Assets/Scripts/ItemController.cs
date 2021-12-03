@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,7 +27,7 @@ public class ItemController : MonoBehaviour
         {
 
             timerIsRunning = true;
-            message.text = "Congradulations! You win. It took you " + string.Format("{0:00}:{1:00}", Level_Time.TimeTakenMin, Level_Time.TimeTakenSec);
+            message.text = "Congratulations! You win! It took you " + string.Format("{0:00}:{1:00}", Level_Time.TimeTakenMin, Level_Time.TimeTakenSec);
         }
     }
 

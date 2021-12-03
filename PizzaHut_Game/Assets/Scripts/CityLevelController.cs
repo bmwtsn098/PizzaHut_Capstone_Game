@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CityLevelController : MonoBehaviour
@@ -10,7 +10,7 @@ public class CityLevelController : MonoBehaviour
     private GameObject[] nonPickedUpItems;
     private bool deliveryLocationPicked = false;
 
-    private int rounds = 2;
+    private int rounds = 0;
 
     // Start is called before the first frame update
     void Start()
