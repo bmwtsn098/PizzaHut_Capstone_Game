@@ -68,7 +68,7 @@ public class CityLevelController : MonoBehaviour
             {
                 Debug.Log("out of rounds");
 
-                light.enabled = false;
+                //light.enabled = false;
                 selectedBuilding = GameObject.FindGameObjectWithTag("PizzaHut");
                 selectedBuilding.tag = "Exit";
             }
