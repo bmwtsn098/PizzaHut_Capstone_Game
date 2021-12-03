@@ -11,6 +11,8 @@ public class PlayerJoystick : MonoBehaviour
 	public int speed;
 	private Renderer color;
 	public JoystickController joystick;
+	public GameObject canvas;
+	private float time = 0;
 
 	// Use this for initialization
 	void Start()
@@ -18,13 +20,24 @@ public class PlayerJoystick : MonoBehaviour
 
 		player = GetComponent<Rigidbody>();
 		color = GetComponent<Renderer>();
+		time = 0;
+		Level_Time.TimeTakenMin = 0;
+		Level_Time.TimeTakenSec = 0;
 
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		time = time + Time.deltaTime;
+		
+		float minutes = Mathf.FloorToInt(time / 60);
+		float seconds = Mathf.FloorToInt(time % 60);
+		Level_Time.TimeTakenMin = minutes;
+		Level_Time.TimeTakenSec = seconds;
 
+		Text timer = (Text)canvas.GetComponent("Timer");
+		timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
 	}
 
